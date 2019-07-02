@@ -33,6 +33,7 @@
   "bundleDependencies": false,
   "dependencies": {
     "@babel/core": "^7.4.3",
+    "ali-oss": "^6.1.1",
     "async": "^2.6.1",
     "axios": "^0.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
@@ -90,6 +91,6 @@
   },
   "license": "MIT",
   "main": "bin/ice-devtools.js",
-  "name": "@spaas/materials-devtools",
+  "name": "ice-devtools",
   "version": "2.3.3"
 }

@@ -28,16 +28,17 @@ function goldlog(action, extraData = {}) {
     }`;
   }, '');
 
-  axios({
-    method: 'post',
-    url: 'http://gm.mmstat.com/iceteam.iceworks.log',
-    data: {
-      cache: Math.random(),
-      gmkey: 'CLK',
-      gokey: encodeURIComponent(gokey),
-      logtype: '2',
-    },
-  }).then(() => {
-  }).catch(() => {
-  });
+  // TODO 将对应的用户版本记录到服务器
+  // axios({
+  //   method: 'post',
+  //   url: 'http://gm.mmstat.com/iceteam.iceworks.log',
+  //   data: {
+  //     cache: Math.random(),
+  //     gmkey: 'CLK',
+  //     gokey: encodeURIComponent(gokey),
+  //     logtype: '2',
+  //   },
+  // }).then(() => {
+  // }).catch(() => {
+  // });
 }

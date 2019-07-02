@@ -6,14 +6,9 @@ const updater = require('npm-updater');
 const packageJson = require('../package.json');
 const COMMANDS = require('../config/commands');
 const optionsAttachToEnv = require('../utils/options-attach-to-env');
-const goldlog = require('../utils/goldlog');
 
 const cwd = process.cwd();
-
-// 统计用户版本
-goldlog('version', {
-  version: packageJson.version,
-});
+// TODO 统计用户版本
 
 const tag = 'latest';
 const updateMessage = `你可以执行 npm install -g ice-devtools@${tag} 来安装此版本\n`;
@@ -81,8 +76,6 @@ function exec() {
       /* eslint-disable-next-line prefer-rest-params */
       const args = [cwd].concat(Array.prototype.slice.call(arguments));
 
-      goldlog(cmdType, {});
-
       fn.apply(global, args);
     });
   });
@@ -96,8 +89,6 @@ function exec() {
 
   program.arguments('<command>').action((cmd) => {
     program.outputHelp();
-    console.log();
     console.log(`  ${chalk.red(`Unknown command ${chalk.yellow(cmd)}.`)}`);
-    console.log();
   });
 }
