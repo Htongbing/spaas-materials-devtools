@@ -48,6 +48,10 @@ module.exports = {
         name: '-p --port [port]',
         desc: 'port',
       },
+      {
+        name: '--ossConfig [ossConfig]',
+        desc: 'oss config, include region, accessKeyId, accessKeySecret, bucket and so on',
+      },
     ],
   },
   generate: {

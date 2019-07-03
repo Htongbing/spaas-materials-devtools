@@ -201,11 +201,16 @@ function generateMaterialsData(files, SPACE, type) {
   return BluebirdPromise.map(result, (materialItem) => {
     const npmName = materialItem.source.npm;
     const version = materialItem.source.version;
-    return getNpmTime(npmName, version).then((time) => {
-      materialItem.publishTime = time.created;
-      materialItem.updateTime = time.modified;
+    // 只有组件查询npm版本
+    if (type === 'component') {
+      return getNpmTime(npmName, version).then((time) => {
+        materialItem.publishTime = time.created;
+        materialItem.updateTime = time.modified;
+        return materialItem;
+      });
+    } else {
       return materialItem;
-    });
+    }
   }, {
     concurrency,
   });
