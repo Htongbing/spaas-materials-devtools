@@ -7,7 +7,7 @@ fork from ice-devtools@2.3.3
 Creates a materials application using the command line, is the Standard Tooling for ICE material Development.
 
 ## Installation
-
+å
 Prerequisites: Node.js (>=8.x), npm version 5+.
 
 ```bash
