@@ -1,5 +1,9 @@
 # spaas-devtools
 
+fork from ice-devtools@2.3.3
+- add screenshot.png upload to oss;
+- remove check block npm version;
+
 Creates a materials application using the command line, is the Standard Tooling for ICE material Development.
 
 ## Installation
