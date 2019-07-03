@@ -1,4 +1,4 @@
-# ice-devtools
+# spaas-devtools
 
 Creates a materials application using the command line, is the Standard Tooling for ICE material Development.
 
@@ -7,14 +7,14 @@ Creates a materials application using the command line, is the Standard Tooling 
 Prerequisites: Node.js (>=8.x), npm version 5+.
 
 ```bash
-$ npm i ice-devtools -g
+$ npm i spaas-devtools -g
 ```
 
 ## Quick Start
 
 ```bash
 $ mkdir my-materials && cd my-materials
-$ ice-devtools init
+$ spaas-devtools init
 ```
 
 It will create a directory called my-materials inside the current folder.
@@ -46,7 +46,7 @@ No configuration or complicated folder structures, just the files you need to bu
 Inside the newly created project, you can run some built-in commands:
 
 ```
-$ npm run deploy //  equal to： ice-devtools generate && ice-devtools sync
+$ npm run deploy //  equal to： spaas-devtools generate && spaas-devtools sync
 ```
 
 It will be automatically generate materials JSON data in build folder，The build folder is ready to be deployed，return a material source interface.
@@ -56,7 +56,7 @@ It will be automatically generate materials JSON data in build folder，The buil
 You can add materials, including blocks and templates：
 
 ```
-$ ice-devtools add
+$ spaas-devtools add
 ```
 
 ## Documentation
