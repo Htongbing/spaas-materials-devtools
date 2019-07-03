@@ -9,7 +9,7 @@
 #### 安装开发者工具
 
 ```
-$ npm install ice-devtools -g
+$ npm install spaas-devtools -g
 ```
 
 #### 区块预览
@@ -33,5 +33,5 @@ $ npm run start
 ```
 # 根据提示自定义添加
 # 需要到根目录下添加
-$ ice-devtools add
+$ spaas-devtools add
 ```
