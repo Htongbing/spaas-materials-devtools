@@ -1,34 +1,15 @@
 {
-  "_from": "ice-devtools",
-  "_id": "ice-devtools@2.3.3",
-  "_inBundle": false,
-  "_integrity": "sha512-TKdfuR3LMhe/I8bADjmZ0HpYZMCJB7Bi3V9zGKlRd5H7zBDIgDTxVcPZiiZs0mgLkqOYo4HuFREGBqgJUeTHxg==",
-  "_location": "/ice-devtools",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "ice-devtools",
-    "name": "ice-devtools",
-    "escapedName": "ice-devtools",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/ice-devtools/-/ice-devtools-2.3.3.tgz",
-  "_shasum": "ab77befafb4c443bb702d3556e1c9c0be467c008",
-  "_spec": "ice-devtools",
-  "_where": "/Users/barret/deepexi/xpaas-materilas-devtools",
+  "name": "spaas-devtools",
+  "version": "1.0.0",
+  "description": "spaas 物料开发者工具",
+  "main": "bin/spaas-devtools.js",
+  "license": "MIT",
   "author": {
-    "name": "ICE Team",
-    "email": "ice-admin@alibaba-inc.com"
+    "name": "SPAAS Team"
   },
   "bin": {
-    "ice-devtools": "bin/ice-devtools.js",
-    "idev": "bin/ice-devtools.js"
+    "spaas-devtools": "bin/spaas-devtools.js",
+    "idev": "bin/spaas-devtools.js"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -85,12 +66,7 @@
     "validate-npm-package-name": "^3.0.0"
   },
   "deprecated": false,
-  "description": "ice 物料开发者工具",
   "engines": {
     "node": ">=8.0.0"
-  },
-  "license": "MIT",
-  "main": "bin/ice-devtools.js",
-  "name": "ice-devtools",
-  "version": "2.3.3"
+  }
 }

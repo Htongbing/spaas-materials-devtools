@@ -11,7 +11,7 @@ const cwd = process.cwd();
 // TODO 统计用户版本
 
 const tag = 'latest';
-const updateMessage = `你可以执行 npm install -g ice-devtools@${tag} 来安装此版本\n`;
+const updateMessage = `你可以执行 npm install -g spaas-devtools@${tag} 来安装此版本\n`;
 
 // 提醒用户安装最新版本
 updater({

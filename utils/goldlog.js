@@ -10,7 +10,7 @@ module.exports = goldlog;
  */
 function goldlog(action, extraData = {}) {
   const realData = {
-    action: `ice-devtools-${action}`,
+    action: `spaas-devtools-${action}`,
     data: {
       ...extraData,
       // 这里可以加一些全局参数

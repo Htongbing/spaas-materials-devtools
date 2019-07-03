@@ -4,7 +4,7 @@ const { format } = require('util');
 /**
  * Prefix.
  */
-const prefix = '   ice-devtools';
+const prefix = '   spaas-devtools';
 const sep = chalk.gray('·');
 
 /**
