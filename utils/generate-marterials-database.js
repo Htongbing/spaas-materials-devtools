@@ -117,7 +117,7 @@ function generateMaterialsData(files, SPACE, type) {
       description: pkg.description,
       homepage: pkg.homepage,
       categories: materialConfig.categories || [],
-      repository: pkg.repository && pkg.repository.url,
+      repository: pkg.repository,
       source: {
         type: 'npm',
         npm: pkg.name,
