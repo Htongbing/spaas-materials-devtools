@@ -1,6 +1,6 @@
 {
-  "name": "spaas-devtools",
-  "version": "1.0.0",
+  "name": "@spaas/spaas-devtools",
+  "version": "1.0.1",
   "description": "spaas 物料开发者工具",
   "main": "bin/spaas-devtools.js",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "bin": {
     "spaas-devtools": "bin/spaas-devtools.js",
-    "idev": "bin/spaas-devtools.js"
+    "spaas": "bin/spaas-devtools.js"
   },
   "bundleDependencies": false,
   "dependencies": {
