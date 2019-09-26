@@ -1,48 +1,46 @@
 const request = require('request-promise');
-const { register } = require('../config/const')
+const shelljs = require('shelljs');
+const chalk = require('chalk');
+const { register } = require('../config/const');
 
-const cacheData = {}
-
-/**
- * 从 register 获取 npm 的信息
- */
-function getNpmInfo(npm) {
-  if (cacheData[npm]) {
-    return Promise.resolve(cacheData[npm]);
-  }
-
-  const url = `${register}/${npm}`;
-
-  return request.get(url).then((response) => {
-
+function getPrivatePackages() {
+  return request.get(`${register}/-/verdaccio/packages`).then(res => {
     let body;
+
     try {
-      body = JSON.parse(response);
-    } catch (error) {
-      return Promise.reject(error);
-    }
+      body = JSON.parse(res);
+    } catch (e) {
+      return Promise.reject(e);
+    };
 
-    cacheData[npm] = body;
-    return body;
+    const packages = {};
+
+    body.forEach(({name, version}) => {
+      packages[name] = version;
+    });
+
+    return packages;
   });
-}
+};
 
-/**
- * 获取某个 npm 的最新版本号
- *
- * @param {String} npm
- */
-function getLatestVersion(npm) {
-  return getNpmInfo(npm).then((data) => {
-    if (!data['dist-tags'] || !data['dist-tags'].latest) {
-      return Promise.reject(new Error('Error: 没有 latest 版本号'));
-    }
+function logVersionDiff(packages, tip) {
+  if (packages.length) {
+    console.log(chalk.yellow(tip));
+    console.log(packages.map(([package, version, latest]) => `${chalk.blue(`${package}: `)}${chalk.green(`${version} => ^${latest}`)}`).join('\n'));
+  };
+};
 
-    const latestVersion = data['dist-tags'].latest;
-    return latestVersion;
+function installPackages(packages, register = 'https://registry.npm.taobao.org') {
+  return new Promise((resolve, reject) => {
+    const installCommand = `yarn add ${packages.map(([package]) => package).join(' ')} --registry=${register}`;
+    shelljs.exec(installCommand, code => {
+      code === 0 ? resolve() : reject(new Error('Execution error'));
+    });
   });
-}
+};
 
 module.exports = {
-  getLatestVersion
+  getPrivatePackages,
+  logVersionDiff,
+  installPackages
 };
