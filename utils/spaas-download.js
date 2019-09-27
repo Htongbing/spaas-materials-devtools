@@ -3,7 +3,7 @@ const ora = require('ora');
 const { spaasCliGithubDepository } = require('../config/const');
 const logger = require('../utils/logger');
 
-module.exports = async dir => {
+module.exports = dir => {
   return new Promise((resolve, reject) => {
 
     const spinner = ora('downloading');
@@ -13,7 +13,7 @@ module.exports = async dir => {
       spinner.stop();
       if (err) return reject(err);
       logger.info('init success');
-      resolve()
+      resolve();
     });
   });
 };

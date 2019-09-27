@@ -65,8 +65,5 @@ module.exports = {
   },
   clear: {
     desc: 'Clear cache data',
-  },
-  spaasinit: {
-    desc: 'generate a new cli from spaas-admin-template'
   }
 };
