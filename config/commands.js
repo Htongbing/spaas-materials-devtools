@@ -66,4 +66,7 @@ module.exports = {
   clear: {
     desc: 'Clear cache data',
   },
+  install: {
+    desc: 'Update spaas package'
+  }
 };
