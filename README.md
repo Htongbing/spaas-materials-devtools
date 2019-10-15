@@ -11,7 +11,7 @@ Creates a materials application using the command line, is the Standard Tooling 
 Prerequisites: Node.js (>=8.x), npm version 5+.
 
 ```bash
-$ npm i spaas-devtools -g
+$ npm i @spaas/spaas-devtools -g
 ```
 
 ## Quick Start
